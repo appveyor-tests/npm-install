@@ -3,7 +3,7 @@ version: 1.0.{build}
 install: 
   - npm install
   - ps: |
-      $Folders = @("node_modules/gulp", "node_modules/angular")
+      $Folders = @("node_modules/gulp", "node_modules/angular", "node_modules/xyz")
       foreach ($Folder in $Folders){
         if (-not (Test-Path ($APPVEYOR_BUILD_DIR + $Folder))){
           Write-Host "$Folder missing"
