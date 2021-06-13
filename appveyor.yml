@@ -1,6 +1,10 @@
 version: 1.0.{build}
 
-install: 
+install:
+  - where node
+  - node --version
+  - where npm
+  - npm --version
   - npm install
   - ps: |
       $Folders = @("node_modules/gulp", "node_modules/angular")
